@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class Spree::ReviewsController < Spree::StoreController
+class Spree::ReviewsController < defined?(Spree::StoreController) ? Spree::StoreController : ApplicationController
   helper Spree::BaseHelper
   before_action :load_product, only: [:index, :new, :create, :edit, :update]
 
