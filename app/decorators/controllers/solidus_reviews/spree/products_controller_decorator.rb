@@ -9,7 +9,7 @@ module SolidusReviews
         end
       end
 
-      ::Spree::ProductsController.prepend self
+      ::Spree::ProductsController.prepend self if defined?(::Spree::ProductsController)
     end
   end
 end
